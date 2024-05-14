@@ -1,6 +1,7 @@
 import "./globals.css";
 import Image from "next/image";
 import Logo from "../../public/img/logo.gif";
+import Link from "next/link";
 
 export const metadata = {
   title: "StarWars",
@@ -13,11 +14,13 @@ export default function RootLayout({ children }) {
       <body>
         <header className="bg-teal-500">
           <nav>
-            <Image
-              src={ Logo }
-              alt="Logo de StarWars"
-              className="w-48"
-            />
+            <Link href="/">
+              <Image
+                src={ Logo }
+                alt="Logo de StarWars"
+                className="w-48"
+                />
+            </Link>
 
           </nav>
         </header>
