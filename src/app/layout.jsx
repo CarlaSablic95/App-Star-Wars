@@ -14,17 +14,30 @@ export default function RootLayout({ children }) {
       <body>
         <header className="bg-teal-500">
           <nav>
-            <Link href="/">
-              <Image
-                src={ Logo }
-                alt="Logo de StarWars"
-                className="w-48"
-                />
-            </Link>
+            <ul className="flex">
+              <li>
+              <Link href="/">
+                <Image
+                  src={ Logo }
+                  alt="Logo de StarWars"
+                  className="w-48"
+                  />
+              </Link>
+              </li>
+              <li>
+                <Link href="/films">Films</Link> 
+              </li>
+              <li>
+                <Link href="/characters">Characters</Link> 
+              </li>
+            </ul>
 
           </nav>
         </header>
-        {children}
+        { children }
+        <footer className="bg-teal-400">
+           <h4 className="text-center text-white py-5">Starwars 2024</h4>
+        </footer>
         </body>
     </html>
   );
