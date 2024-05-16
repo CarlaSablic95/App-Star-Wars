@@ -16,13 +16,6 @@ header, footer {
     background-color: #2a2a32;
 }
 
-header {
-    position: absolute;
-    z-index: 2;
-    width: 100%;
-}
-
-
 .card-film {
     background-color: #325259;
 }
@@ -56,4 +49,14 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media (width <= 768px) {
+    
+    header {
+        position: absolute;
+        z-index: 2;
+        width: 100%;
+    }
+
 }
