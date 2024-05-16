@@ -18,30 +18,34 @@ export default async function Characters() {
 
   return (
     <main className="min-h-screen p-4">
-      <h1>CHARACTERS</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        { 
-          charactersData.results.map((character, id) => (
-            <div className="">
-              <Link href={`/characters/${id + 1}`}>
-                <div className="bg-green-300 text-center">
-                  <div className="flex justify-evenly">
-                    <Image
+      <section className="container mx-auto px-10 lg:px-20">
+        <h1 className="text-center py-5 text-3xl font-medium">Characters</h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          { 
+            charactersData.results.map((character, id) => (
+              <div className="">
+                <Link href={`/characters/${id + 1}`}>
+                  <div className="card rounded-3xl drop-shadow-lg sm:columns-1 md:columns-2  inline-block align-middle">
+                  <div className="">
+                    <Image 
                       src={ Personajes }
-                      alt="Imagen genérica para personajes"
-                      className="w-80"
-                      />
+                      alt="Imagen genérica para las películas"
+                      className="w-100 rounded-t-3xl md:rounded-3xl"
+                    />
                   </div>
-                  <h2 key={ id }>Nombre: { character.name }</h2>
-                  <h2 key={ id }>Color de ojos: { character.eye_color }</h2>
-                  <Gender key={ id } id={ character.gender } />
+                  <div className="p-5 text-center">
+                    <h4 className="text-slate-50"><strong>Name:</strong> { character.name }</h4>
+                    <p className="text-white"><strong>Eye color: </strong> { character.eye_color }</p>
+                    <Gender key={ id } id={ character.gender } />
+                  </div>
                 </div>
-                </Link>
-            </div>
-          ))
-          
-        }
-      </div>
+                  </Link>
+              </div>
+            ))
+            
+          }
+        </div>
+      </section>
       
     </main>
   );
