@@ -1,7 +1,5 @@
 import "./globals.css";
-import Image from "next/image";
-import Logo from "../../public/img/logo.gif";
-import Link from "next/link";
+import Navbar from "./components/Navbar";
 
 export const metadata = {
   title: "StarWars",
@@ -12,30 +10,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <header className="bg-teal-500">
-          <nav>
-            <ul className="flex">
-              <li>
-              <Link href="/">
-                <Image
-                  src={ Logo }
-                  alt="Logo de StarWars"
-                  className="w-48"
-                  />
-              </Link>
-              </li>
-              <li>
-                <Link href="/films">Films</Link> 
-              </li>
-              <li>
-                <Link href="/characters">Characters</Link> 
-              </li>
-            </ul>
-
-          </nav>
+        <header className="">
+          <Navbar />
         </header>
         { children }
-        <footer className="bg-teal-400">
+        <footer className="py-5">
            <h4 className="text-center text-white py-5">© Starwars 2024</h4>
         </footer>
         </body>
