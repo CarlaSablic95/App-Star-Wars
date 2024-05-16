@@ -55,8 +55,14 @@ header, footer {
     
     header {
         position: absolute;
+        margin-bottom: 2rem;
         z-index: 2;
         width: 100%;
+    }
+
+    main {
+        position: relative;
+        top: 5rem;
     }
 
 }
