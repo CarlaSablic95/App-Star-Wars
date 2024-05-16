@@ -17,26 +17,27 @@ export default async function Character ({ params }) {
     console.log("CHARACTER: ", characterDetail)
 
     return (
-        <section className="h-full">
-            <h1 className="text-center">Character details</h1>
-            <div className="container">
+        <section className="h-full pb-44">
+            <h1 className="text-center py-5 text-3xl font-medium mb-4">Character details</h1>
+            <div className="container-fluid">
                 <div className="grid grid-cols-1">
                     {
                         <div className="flex justify-evenly">
                         <div>
                             <Image 
                                 src={ Personaje }
-                                className="w-80"
+                                className="w-96 drop-shadow-lg rounded-t-3xl md:rounded-3xl"
+                                alt="Character image generic"
                             />
                         </div>
                         <div>
-                            <h2>Name: { characterDetail.name }</h2>
-                            <h2>Eye color: { characterDetail.eye_color }</h2>
-                            <h2>Birth year: { characterDetail.birth_year }</h2>
-                            <h2>Hair color: { characterDetail.hair_color }</h2>
-                            <h2>Height: { characterDetail.height }</h2>
-                            <h2>Skin color: { characterDetail.skin_color }</h2>
-                            <h2>Mass: { characterDetail.mass}</h2>
+                        <h4 className="text-lg font-semibold">Name:  <span className="font-normal">{ characterDetail.name }</span></h4>
+                        <h4 className="text-lg font-semibold">Eye color: <span className="font-normal"> { characterDetail.eye_color }</span></h4>
+                        <h4 className="text-lg font-semibold">Birthyear: <span className="font-normal"> { characterDetail.birth_year }</span></h4>
+                        <h4 className="text-lg font-semibold">Hair color: <span className="font-normal"> { characterDetail.hair_color }</span></h4>
+                        <h4 className="text-lg font-semibold">Height: <span className="font-normal"> { characterDetail.height }</span></h4>
+                        <h4 className="text-lg font-semibold">Skin color: <span className="font-normal"> { characterDetail.skin_color }</span></h4>
+                        <h4 className="text-lg font-semibold">Mass: <span className="font-normal"> { characterDetail.mass}</span></h4>
                         </div>
                     </div>
                     }

@@ -27,7 +27,7 @@ export default async function Films() {
                 <div className="">
                   <Image 
                     src={ Portada }
-                    alt="Imagen genérica para las películas"
+                    alt="Films image generic"
                     className="w-100 rounded-t-3xl md:rounded-3xl"
                   />
                 </div>

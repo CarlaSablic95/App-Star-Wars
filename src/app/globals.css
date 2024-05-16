@@ -1,3 +1,52 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+*::-webkit-scrollbar {
+    width: 13px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #059AF4 30%, #dd2c2c 60%);
+    border-radius: 8px;
+    border: 3px solid #ffffff;
+}
+
+header, footer {
+    background-color: #2a2a32;
+}
+
+.card-film {
+    background-color: #325259;
+}
+
+.card {
+    background-color: #672222;
+}
+
+.bg-home {
+    background-image: url("../../public/img/star-wars-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.container-title {
+    filter: brightness(0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    position: absolute;
+    top: 96px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: var(--white);
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
