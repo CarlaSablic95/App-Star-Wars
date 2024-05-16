@@ -36,7 +36,7 @@ export default function RootLayout({ children }) {
         </header>
         { children }
         <footer className="bg-teal-400">
-           <h4 className="text-center text-white py-5">Starwars 2024</h4>
+           <h4 className="text-center text-white py-5">© Starwars 2024</h4>
         </footer>
         </body>
     </html>
