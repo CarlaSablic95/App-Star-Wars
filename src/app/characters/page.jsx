@@ -18,7 +18,7 @@ export default async function Characters() {
 
   return (
     <main className="min-h-screen p-4">
-      <section className="container mx-auto px-10 lg:px-20">
+      <section className="container mx-auto px-10 lg:px-20 section-character">
         <h1 className="text-center py-5 text-3xl font-medium">Characters</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           { 

@@ -14,8 +14,6 @@ export default async function Character ({ params }) {
     const { characterId } = params;
     const characterDetail = await getCharacterDetails(characterId);
 
-    console.log("CHARACTER: ", characterDetail)
-
     return (
         <main className="pb-24">
             <section className="h-full pb-44">
